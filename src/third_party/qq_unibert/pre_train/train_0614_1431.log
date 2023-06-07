@@ -1,0 +1,725 @@
+14:31:26 [INFO] Start
+14:31:26 [INFO] ==================================================================
+14:31:26 [INFO] Config - pretrain:
+# Pretrain file num
+PRETRAIN_FILE_NUM = 20
+LOAD_DATA_TYPE = 'mem'#'fluid'
+# Training params
+NUM_FOLDS = 1
+SEED = 42
+BATCH_SIZE = 32
+NUM_EPOCHS = 10
+WARMUP_RATIO = 0.06
+REINIT_LAYER = 0
+WEIGHT_DECAY = 0.01
+LR = {'others':5e-4, 'roberta':5e-5, 'newfc_videoreg':5e-4}
+LR_LAYER_DECAY = 1.0
+PRETRAIN_TASK = ['mlm', 'mvm', 'itm'] #['tag', 'mlm', 'mvm', 'itm']
+14:31:26 [INFO] ==================================================================
+14:31:26 [INFO] Config - model:
+MODEL_TYPE = 'uni'#'all', 'cross', 'frame', 'bi', 'uni'
+
+MODEL_CONFIG = { 
+    'HIDDEN_SIZE': 768,
+    'NUM_CLASSES': 10000,
+}
+14:31:26 [INFO] ==================================================================
+14:31:26 [INFO] Config - data:
+BERT_PATH = '../pre_model/chinese-roberta-wwm-ext'
+14:31:26 [INFO] Model_type = uni
+14:31:26 [INFO] ==================================================================
+14:31:26 [INFO] Fold=1/1 seed=42
+14:31:26 [INFO] Load data into memory
+14:32:01 [INFO] Dataset used memory = 2.8GB
+14:32:01 [INFO] Total train steps=-1, warmup steps=0
+14:34:52 [INFO] Epoch=1/10|step= 20|val_loss= 3.039|time=41.3s|New best_val_loss= 3.039
+14:44:27 [INFO] Epoch=1/10|step=500|val_loss= 1.303|time=4.47e+02s|New best_val_loss= 1.303
+14:54:18 [INFO] Epoch=1/10|step=1000|val_loss= 1.238|time=4.67e+02s|New best_val_loss= 1.238
+15:04:09 [INFO] Epoch=1/10|step=1500|val_loss= 1.209|time=4.68e+02s|New best_val_loss= 1.209
+15:14:02 [INFO] Epoch=1/10|step=2000|val_loss= 1.181|time=4.67e+02s|New best_val_loss= 1.181
+15:23:54 [INFO] Epoch=1/10|step=2500|val_loss= 1.171|time=4.67e+02s|New best_val_loss= 1.171
+15:33:49 [INFO] Epoch=1/10|step=3000|val_loss= 1.145|time=4.67e+02s|New best_val_loss= 1.145
+15:43:39 [INFO] Epoch=1/10|step=3500|val_loss= 1.132|time=4.67e+02s|New best_val_loss= 1.132
+15:53:33 [INFO] Epoch=1/10|step=4000|val_loss= 1.121|time=4.67e+02s|New best_val_loss= 1.121
+16:03:23 [INFO] Epoch=1/10|step=4500|val_loss= 1.125|time=4.68e+02s
+16:13:13 [INFO] Epoch=1/10|step=5000|val_loss= 1.105|time=4.68e+02s|New best_val_loss= 1.105
+16:23:04 [INFO] Epoch=1/10|step=5500|val_loss= 1.108|time=4.67e+02s
+16:32:58 [INFO] Epoch=1/10|step=6000|val_loss= 1.102|time=4.67e+02s|New best_val_loss= 1.102
+16:42:51 [INFO] Epoch=1/10|step=6500|val_loss= 1.085|time=4.67e+02s|New best_val_loss= 1.085
+16:52:41 [INFO] Epoch=1/10|step=7000|val_loss= 1.078|time=4.67e+02s|New best_val_loss= 1.078
+17:02:30 [INFO] Epoch=1/10|step=7500|val_loss= 1.086|time=4.67e+02s
+17:12:22 [INFO] Epoch=1/10|step=8000|val_loss= 1.069|time=4.67e+02s|New best_val_loss= 1.069
+17:22:11 [INFO] Epoch=1/10|step=8500|val_loss=  1.07|time=4.68e+02s
+17:32:03 [INFO] Epoch=1/10|step=9000|val_loss=  1.08|time=4.67e+02s
+17:41:54 [INFO] Epoch=1/10|step=9500|val_loss= 1.061|time=4.67e+02s|New best_val_loss= 1.061
+17:51:42 [INFO] Epoch=1/10|step=10000|val_loss= 1.068|time=4.68e+02s
+18:01:36 [INFO] Epoch=1/10|step=10500|val_loss= 1.061|time=4.68e+02s|New best_val_loss= 1.061
+18:11:29 [INFO] Epoch=1/10|step=11000|val_loss= 1.051|time=4.68e+02s|New best_val_loss= 1.051
+18:21:20 [INFO] Epoch=1/10|step=11500|val_loss= 1.046|time=4.66e+02s|New best_val_loss= 1.046
+18:31:15 [INFO] Epoch=1/10|step=12000|val_loss= 1.046|time=4.68e+02s|New best_val_loss= 1.046
+18:41:07 [INFO] Epoch=1/10|step=12500|val_loss= 1.052|time=4.67e+02s
+18:50:57 [INFO] Epoch=1/10|step=13000|val_loss= 1.042|time=4.67e+02s|New best_val_loss= 1.042
+19:00:46 [INFO] Epoch=1/10|step=13500|val_loss= 1.044|time=4.68e+02s
+19:10:38 [INFO] Epoch=1/10|step=14000|val_loss= 1.034|time=4.68e+02s|New best_val_loss= 1.034
+19:20:18 [INFO] Epoch=1/10|step=14500|val_loss= 1.038|time=4.67e+02s
+19:30:10 [INFO] Epoch=1/10|step=15000|val_loss= 1.032|time=4.68e+02s|New best_val_loss= 1.032
+19:39:57 [INFO] Epoch=1/10|step=15500|val_loss= 1.037|time=4.68e+02s
+19:49:49 [INFO] Epoch=1/10|step=16000|val_loss= 1.027|time=4.67e+02s|New best_val_loss= 1.027
+19:59:37 [INFO] Epoch=1/10|step=16500|val_loss= 1.028|time=4.67e+02s
+20:09:30 [INFO] Epoch=1/10|step=17000|val_loss= 1.025|time=4.67e+02s|New best_val_loss= 1.025
+20:19:21 [INFO] Epoch=1/10|step=17500|val_loss=  1.02|time=4.68e+02s|New best_val_loss=  1.02
+20:29:12 [INFO] Epoch=1/10|step=18000|val_loss= 1.021|time=4.68e+02s
+20:39:04 [INFO] Epoch=1/10|step=18500|val_loss= 1.019|time=4.67e+02s|New best_val_loss= 1.019
+20:48:54 [INFO] Epoch=1/10|step=19000|val_loss= 1.018|time=4.67e+02s|New best_val_loss= 1.018
+20:58:45 [INFO] Epoch=1/10|step=19500|val_loss= 1.014|time=4.68e+02s|New best_val_loss= 1.014
+21:08:36 [INFO] Epoch=1/10|step=20000|val_loss= 1.015|time=4.67e+02s
+21:18:25 [INFO] Epoch=1/10|step=20500|val_loss= 1.012|time=4.67e+02s|New best_val_loss= 1.012
+21:28:16 [INFO] Epoch=1/10|step=21000|val_loss= 1.011|time=4.67e+02s|New best_val_loss= 1.011
+21:37:52 [INFO] Epoch=1/10|step=21500|val_loss= 1.014|time=4.67e+02s
+21:47:46 [INFO] Epoch=1/10|step=22000|val_loss=  1.01|time=4.67e+02s|New best_val_loss=  1.01
+21:57:40 [INFO] Epoch=1/10|step=22500|val_loss= 1.008|time=4.67e+02s|New best_val_loss= 1.008
+22:07:34 [INFO] Epoch=1/10|step=23000|val_loss=  1.01|time=4.67e+02s
+22:17:28 [INFO] Epoch=1/10|step=23500|val_loss=   1.0|time=4.68e+02s|New best_val_loss=   1.0
+22:27:17 [INFO] Epoch=1/10|step=24000|val_loss= 1.004|time=4.67e+02s
+22:37:08 [INFO] Epoch=1/10|step=24500|val_loss=   1.0|time=4.67e+02s
+22:47:00 [INFO] Epoch=1/10|step=25000|val_loss=0.9978|time=4.67e+02s|New best_val_loss=0.9978
+22:56:52 [INFO] Epoch=1/10|step=25500|val_loss= 0.996|time=4.66e+02s|New best_val_loss= 0.996
+23:06:44 [INFO] Epoch=1/10|step=26000|val_loss=   1.0|time=4.67e+02s
+23:16:35 [INFO] Epoch=1/10|step=26500|val_loss=0.9961|time=4.68e+02s
+23:26:28 [INFO] Epoch=1/10|step=27000|val_loss=0.9987|time=4.67e+02s
+23:36:19 [INFO] Epoch=1/10|step=27500|val_loss=0.9936|time=4.68e+02s|New best_val_loss=0.9936
+23:46:12 [INFO] Epoch=1/10|step=28000|val_loss= 0.996|time=4.67e+02s
+23:56:03 [INFO] Epoch=1/10|step=28500|val_loss=0.9913|time=4.68e+02s|New best_val_loss=0.9913
+00:05:54 [INFO] Epoch=1/10|step=29000|val_loss=0.9868|time=4.67e+02s|New best_val_loss=0.9868
+00:15:45 [INFO] Epoch=1/10|step=29500|val_loss=0.9915|time=4.67e+02s
+00:25:41 [INFO] Epoch=1/10|step=30000|val_loss=0.9861|time=4.67e+02s|New best_val_loss=0.9861
+00:35:39 [INFO] Epoch=1/10|step=30500|val_loss=0.9939|time=4.67e+02s
+00:45:30 [INFO] Epoch=1/10|step=31000|val_loss=0.9848|time=4.67e+02s|New best_val_loss=0.9848
+00:55:19 [INFO] Epoch=1/10|step=31500|val_loss=0.9849|time=4.68e+02s
+01:05:10 [INFO] Epoch=1/10|step=32000|val_loss= 0.979|time=4.68e+02s|New best_val_loss= 0.979
+01:15:00 [INFO] Epoch=1/10|step=32500|val_loss=0.9781|time=4.67e+02s|New best_val_loss=0.9781
+01:24:51 [INFO] Epoch=1/10|step=33000|val_loss=0.9729|time=4.67e+02s|New best_val_loss=0.9729
+01:34:41 [INFO] Epoch=1/10|step=33500|val_loss=0.9807|time=4.67e+02s
+01:44:33 [INFO] Epoch=1/10|step=34000|val_loss=0.9723|time=4.68e+02s|New best_val_loss=0.9723
+01:54:47 [INFO] Epoch=2/10|step=34500|val_loss=0.9719|time=4.89e+02s|New best_val_loss=0.9719
+02:04:38 [INFO] Epoch=2/10|step=35000|val_loss=0.9704|time=4.68e+02s|New best_val_loss=0.9704
+02:14:29 [INFO] Epoch=2/10|step=35500|val_loss=0.9725|time=4.68e+02s
+02:24:22 [INFO] Epoch=2/10|step=36000|val_loss=0.9656|time=4.68e+02s|New best_val_loss=0.9656
+02:34:14 [INFO] Epoch=2/10|step=36500|val_loss= 0.967|time=4.68e+02s
+02:44:04 [INFO] Epoch=2/10|step=37000|val_loss=0.9621|time=4.68e+02s|New best_val_loss=0.9621
+02:53:58 [INFO] Epoch=2/10|step=37500|val_loss=0.9588|time=4.68e+02s|New best_val_loss=0.9588
+03:03:49 [INFO] Epoch=2/10|step=38000|val_loss=0.9677|time=4.68e+02s
+03:13:41 [INFO] Epoch=2/10|step=38500|val_loss=0.9577|time=4.68e+02s|New best_val_loss=0.9577
+03:23:30 [INFO] Epoch=2/10|step=39000|val_loss=0.9561|time=4.68e+02s|New best_val_loss=0.9561
+03:33:19 [INFO] Epoch=2/10|step=39500|val_loss=0.9572|time=4.67e+02s
+03:43:10 [INFO] Epoch=2/10|step=40000|val_loss=0.9536|time=4.68e+02s|New best_val_loss=0.9536
+03:53:01 [INFO] Epoch=2/10|step=40500|val_loss=0.9555|time=4.67e+02s
+04:02:53 [INFO] Epoch=2/10|step=41000|val_loss=0.9585|time=4.67e+02s
+04:12:49 [INFO] Epoch=2/10|step=41500|val_loss=0.9478|time=4.68e+02s|New best_val_loss=0.9478
+04:22:40 [INFO] Epoch=2/10|step=42000|val_loss=0.9545|time=4.68e+02s
+04:32:28 [INFO] Epoch=2/10|step=42500|val_loss= 0.949|time=4.68e+02s
+04:42:19 [INFO] Epoch=2/10|step=43000|val_loss=0.9481|time=4.68e+02s
+04:52:11 [INFO] Epoch=2/10|step=43500|val_loss=0.9476|time=4.68e+02s|New best_val_loss=0.9476
+05:02:04 [INFO] Epoch=2/10|step=44000|val_loss=0.9483|time=4.67e+02s
+05:11:54 [INFO] Epoch=2/10|step=44500|val_loss= 0.948|time=4.68e+02s
+05:21:46 [INFO] Epoch=2/10|step=45000|val_loss=0.9468|time=4.68e+02s|New best_val_loss=0.9468
+05:31:35 [INFO] Epoch=2/10|step=45500|val_loss= 0.943|time=4.67e+02s|New best_val_loss= 0.943
+05:41:25 [INFO] Epoch=2/10|step=46000|val_loss=0.9452|time=4.68e+02s
+05:51:16 [INFO] Epoch=2/10|step=46500|val_loss=0.9435|time=4.68e+02s
+06:01:05 [INFO] Epoch=2/10|step=47000|val_loss=0.9439|time=4.68e+02s
+06:10:56 [INFO] Epoch=2/10|step=47500|val_loss=0.9429|time=4.66e+02s|New best_val_loss=0.9429
+06:20:48 [INFO] Epoch=2/10|step=48000|val_loss=0.9449|time=4.67e+02s
+06:30:40 [INFO] Epoch=2/10|step=48500|val_loss=0.9391|time=4.68e+02s|New best_val_loss=0.9391
+06:40:30 [INFO] Epoch=2/10|step=49000|val_loss=0.9454|time=4.68e+02s
+06:50:20 [INFO] Epoch=2/10|step=49500|val_loss=0.9455|time=4.67e+02s
+07:00:11 [INFO] Epoch=2/10|step=50000|val_loss=0.9397|time=4.68e+02s
+07:09:50 [INFO] Epoch=2/10|step=50500|val_loss=0.9431|time=4.67e+02s
+07:19:41 [INFO] Epoch=2/10|step=51000|val_loss=0.9399|time=4.68e+02s
+07:29:32 [INFO] Epoch=2/10|step=51500|val_loss=0.9347|time=4.67e+02s|New best_val_loss=0.9347
+07:39:22 [INFO] Epoch=2/10|step=52000|val_loss=0.9357|time=4.68e+02s
+07:49:11 [INFO] Epoch=2/10|step=52500|val_loss=0.9365|time=4.67e+02s
+07:59:01 [INFO] Epoch=2/10|step=53000|val_loss= 0.936|time=4.68e+02s
+08:08:51 [INFO] Epoch=2/10|step=53500|val_loss=0.9375|time=4.67e+02s
+08:18:42 [INFO] Epoch=2/10|step=54000|val_loss= 0.933|time=4.67e+02s|New best_val_loss= 0.933
+08:28:31 [INFO] Epoch=2/10|step=54500|val_loss=0.9373|time=4.67e+02s
+08:38:21 [INFO] Epoch=2/10|step=55000|val_loss=0.9302|time=4.68e+02s|New best_val_loss=0.9302
+08:48:12 [INFO] Epoch=2/10|step=55500|val_loss=0.9314|time=4.68e+02s
+08:58:03 [INFO] Epoch=2/10|step=56000|val_loss=0.9338|time=4.68e+02s
+09:07:52 [INFO] Epoch=2/10|step=56500|val_loss=0.9352|time=4.68e+02s
+09:17:39 [INFO] Epoch=2/10|step=57000|val_loss=0.9384|time=4.66e+02s
+09:27:27 [INFO] Epoch=2/10|step=57500|val_loss=0.9313|time=4.68e+02s
+09:37:23 [INFO] Epoch=2/10|step=58000|val_loss=0.9302|time=4.67e+02s|New best_val_loss=0.9302
+09:47:14 [INFO] Epoch=2/10|step=58500|val_loss=0.9358|time=4.68e+02s
+09:57:11 [INFO] Epoch=2/10|step=59000|val_loss=0.9296|time=4.68e+02s|New best_val_loss=0.9296
+10:07:04 [INFO] Epoch=2/10|step=59500|val_loss=0.9293|time=4.68e+02s|New best_val_loss=0.9293
+10:16:54 [INFO] Epoch=2/10|step=60000|val_loss=0.9317|time=4.67e+02s
+10:26:45 [INFO] Epoch=2/10|step=60500|val_loss=0.9323|time=4.67e+02s
+10:36:36 [INFO] Epoch=2/10|step=61000|val_loss=0.9292|time=4.68e+02s|New best_val_loss=0.9292
+10:46:28 [INFO] Epoch=2/10|step=61500|val_loss=0.9269|time=4.67e+02s|New best_val_loss=0.9269
+10:56:20 [INFO] Epoch=2/10|step=62000|val_loss=0.9282|time=4.68e+02s
+11:06:01 [INFO] Epoch=2/10|step=62500|val_loss=0.9313|time=4.67e+02s
+11:15:51 [INFO] Epoch=2/10|step=63000|val_loss=0.9278|time=4.67e+02s
+11:25:47 [INFO] Epoch=2/10|step=63500|val_loss=0.9298|time=4.68e+02s
+11:35:37 [INFO] Epoch=2/10|step=64000|val_loss= 0.929|time=4.67e+02s
+11:45:26 [INFO] Epoch=2/10|step=64500|val_loss=0.9285|time=4.68e+02s
+11:55:16 [INFO] Epoch=2/10|step=65000|val_loss=0.9303|time=4.67e+02s
+12:05:09 [INFO] Epoch=2/10|step=65500|val_loss=0.9246|time=4.68e+02s|New best_val_loss=0.9246
+12:14:59 [INFO] Epoch=2/10|step=66000|val_loss=0.9302|time=4.68e+02s
+12:24:53 [INFO] Epoch=2/10|step=66500|val_loss=0.9244|time=4.67e+02s|New best_val_loss=0.9244
+12:34:43 [INFO] Epoch=2/10|step=67000|val_loss=0.9257|time=4.68e+02s
+12:44:34 [INFO] Epoch=2/10|step=67500|val_loss=0.9271|time=4.68e+02s
+12:54:25 [INFO] Epoch=2/10|step=68000|val_loss=0.9234|time=4.68e+02s|New best_val_loss=0.9234
+13:04:13 [INFO] Epoch=2/10|step=68500|val_loss=0.9238|time=4.67e+02s
+13:14:26 [INFO] Epoch=3/10|step=69000|val_loss=0.9283|time=4.9e+02s
+13:24:16 [INFO] Epoch=3/10|step=69500|val_loss=0.9174|time=4.68e+02s|New best_val_loss=0.9174
+13:34:05 [INFO] Epoch=3/10|step=70000|val_loss=0.9208|time=4.67e+02s
+13:43:55 [INFO] Epoch=3/10|step=70500|val_loss=0.9207|time=4.68e+02s
+13:53:44 [INFO] Epoch=3/10|step=71000|val_loss=0.9242|time=4.68e+02s
+14:03:35 [INFO] Epoch=3/10|step=71500|val_loss=0.9248|time=4.68e+02s
+14:13:26 [INFO] Epoch=3/10|step=72000|val_loss=0.9221|time=4.68e+02s
+14:23:17 [INFO] Epoch=3/10|step=72500|val_loss=0.9199|time=4.68e+02s
+14:33:10 [INFO] Epoch=3/10|step=73000|val_loss=0.9211|time=4.68e+02s
+14:43:00 [INFO] Epoch=3/10|step=73500|val_loss=0.9229|time=4.68e+02s
+14:52:48 [INFO] Epoch=3/10|step=74000|val_loss=0.9238|time=4.68e+02s
+15:02:39 [INFO] Epoch=3/10|step=74500|val_loss=0.9228|time=4.68e+02s
+15:12:28 [INFO] Epoch=3/10|step=75000|val_loss=0.9204|time=4.68e+02s
+15:22:18 [INFO] Epoch=3/10|step=75500|val_loss= 0.925|time=4.68e+02s
+15:32:09 [INFO] Epoch=3/10|step=76000|val_loss=0.9232|time=4.68e+02s
+15:42:00 [INFO] Epoch=3/10|step=76500|val_loss=0.9244|time=4.67e+02s
+15:51:54 [INFO] Epoch=3/10|step=77000|val_loss=0.9165|time=4.68e+02s|New best_val_loss=0.9165
+16:01:45 [INFO] Epoch=3/10|step=77500|val_loss=0.9201|time=4.68e+02s
+16:11:29 [INFO] Epoch=3/10|step=78000|val_loss=0.9234|time=4.68e+02s
+16:21:17 [INFO] Epoch=3/10|step=78500|val_loss=0.9182|time=4.68e+02s
+16:31:09 [INFO] Epoch=3/10|step=79000|val_loss=0.9218|time=4.68e+02s
+16:40:58 [INFO] Epoch=3/10|step=79500|val_loss=0.9203|time=4.68e+02s
+16:50:49 [INFO] Epoch=3/10|step=80000|val_loss=0.9109|time=4.68e+02s|New best_val_loss=0.9109
+17:00:40 [INFO] Epoch=3/10|step=80500|val_loss=0.9201|time=4.68e+02s
+17:10:30 [INFO] Epoch=3/10|step=81000|val_loss=0.9205|time=4.68e+02s
+17:20:20 [INFO] Epoch=3/10|step=81500|val_loss=0.9178|time=4.68e+02s
+17:30:12 [INFO] Epoch=3/10|step=82000|val_loss= 0.915|time=4.68e+02s
+17:40:01 [INFO] Epoch=3/10|step=82500|val_loss=0.9133|time=4.68e+02s
+17:49:52 [INFO] Epoch=3/10|step=83000|val_loss=0.9159|time=4.68e+02s
+17:59:41 [INFO] Epoch=3/10|step=83500|val_loss=0.9183|time=4.67e+02s
+18:09:30 [INFO] Epoch=3/10|step=84000|val_loss=0.9124|time=4.68e+02s
+18:19:21 [INFO] Epoch=3/10|step=84500|val_loss=0.9159|time=4.67e+02s
+18:29:03 [INFO] Epoch=3/10|step=85000|val_loss=0.9159|time=4.68e+02s
+18:38:53 [INFO] Epoch=3/10|step=85500|val_loss=0.9157|time=4.68e+02s
+18:48:42 [INFO] Epoch=3/10|step=86000|val_loss=0.9146|time=4.68e+02s
+18:58:34 [INFO] Epoch=3/10|step=86500|val_loss=0.9171|time=4.68e+02s
+19:08:24 [INFO] Epoch=3/10|step=87000|val_loss=0.9183|time=4.68e+02s
+19:18:14 [INFO] Epoch=3/10|step=87500|val_loss=0.9103|time=4.68e+02s|New best_val_loss=0.9103
+19:28:03 [INFO] Epoch=3/10|step=88000|val_loss=0.9152|time=4.67e+02s
+19:37:53 [INFO] Epoch=3/10|step=88500|val_loss=0.9123|time=4.67e+02s
+19:47:41 [INFO] Epoch=3/10|step=89000|val_loss=0.9169|time=4.67e+02s
+19:57:32 [INFO] Epoch=3/10|step=89500|val_loss=0.9149|time=4.67e+02s
+20:07:23 [INFO] Epoch=3/10|step=90000|val_loss=0.9088|time=4.67e+02s|New best_val_loss=0.9088
+20:17:13 [INFO] Epoch=3/10|step=90500|val_loss=0.9096|time=4.68e+02s
+20:27:07 [INFO] Epoch=3/10|step=91000|val_loss=0.9086|time=4.67e+02s|New best_val_loss=0.9086
+20:36:58 [INFO] Epoch=3/10|step=91500|val_loss=0.9122|time=4.68e+02s
+20:46:45 [INFO] Epoch=3/10|step=92000|val_loss=0.9136|time=4.67e+02s
+20:56:35 [INFO] Epoch=3/10|step=92500|val_loss=0.9124|time=4.68e+02s
+21:06:23 [INFO] Epoch=3/10|step=93000|val_loss=0.9094|time=4.67e+02s
+21:16:14 [INFO] Epoch=3/10|step=93500|val_loss=0.9172|time=4.67e+02s
+21:26:03 [INFO] Epoch=3/10|step=94000|val_loss=  0.91|time=4.67e+02s
+21:35:53 [INFO] Epoch=3/10|step=94500|val_loss=0.9097|time=4.68e+02s
+21:45:41 [INFO] Epoch=3/10|step=95000|val_loss=0.9143|time=4.67e+02s
+21:55:32 [INFO] Epoch=3/10|step=95500|val_loss=0.9095|time=4.67e+02s
+22:05:24 [INFO] Epoch=3/10|step=96000|val_loss=0.9087|time=4.67e+02s
+22:15:14 [INFO] Epoch=3/10|step=96500|val_loss=0.9103|time=4.68e+02s
+22:25:02 [INFO] Epoch=3/10|step=97000|val_loss=0.9146|time=4.67e+02s
+22:34:49 [INFO] Epoch=3/10|step=97500|val_loss=0.9106|time=4.68e+02s
+22:44:31 [INFO] Epoch=3/10|step=98000|val_loss=0.9104|time=4.68e+02s
+22:54:20 [INFO] Epoch=3/10|step=98500|val_loss=0.9105|time=4.66e+02s
+23:04:10 [INFO] Epoch=3/10|step=99000|val_loss=0.9055|time=4.68e+02s|New best_val_loss=0.9055
+23:14:02 [INFO] Epoch=3/10|step=99500|val_loss=0.9102|time=4.67e+02s
+23:23:50 [INFO] Epoch=3/10|step=100000|val_loss=0.9112|time=4.68e+02s
+23:33:42 [INFO] Epoch=3/10|step=100500|val_loss=0.9109|time=4.67e+02s
+23:43:38 [INFO] Epoch=3/10|step=101000|val_loss=0.9067|time=4.67e+02s
+23:53:31 [INFO] Epoch=3/10|step=101500|val_loss=0.9039|time=4.68e+02s|New best_val_loss=0.9039
+00:03:19 [INFO] Epoch=3/10|step=102000|val_loss=0.9074|time=4.68e+02s
+00:13:09 [INFO] Epoch=3/10|step=102500|val_loss=0.9097|time=4.68e+02s
+00:22:58 [INFO] Epoch=3/10|step=103000|val_loss=0.9089|time=4.68e+02s
+00:33:11 [INFO] Epoch=4/10|step=103500|val_loss=0.9116|time=4.9e+02s
+00:42:59 [INFO] Epoch=4/10|step=104000|val_loss=0.9084|time=4.68e+02s
+00:52:48 [INFO] Epoch=4/10|step=104500|val_loss=0.9075|time=4.68e+02s
+01:02:37 [INFO] Epoch=4/10|step=105000|val_loss=0.9079|time=4.68e+02s
+01:12:28 [INFO] Epoch=4/10|step=105500|val_loss=0.9076|time=4.68e+02s
+01:22:18 [INFO] Epoch=4/10|step=106000|val_loss=0.9032|time=4.68e+02s|New best_val_loss=0.9032
+01:32:09 [INFO] Epoch=4/10|step=106500|val_loss=0.9037|time=4.68e+02s
+01:42:00 [INFO] Epoch=4/10|step=107000|val_loss=0.9074|time=4.68e+02s
+01:51:52 [INFO] Epoch=4/10|step=107500|val_loss=0.9094|time=4.68e+02s
+02:01:42 [INFO] Epoch=4/10|step=108000|val_loss=0.9066|time=4.68e+02s
+02:11:34 [INFO] Epoch=4/10|step=108500|val_loss=0.9111|time=4.68e+02s
+02:21:27 [INFO] Epoch=4/10|step=109000|val_loss=0.9099|time=4.68e+02s
+02:31:19 [INFO] Epoch=4/10|step=109500|val_loss=0.9093|time=4.68e+02s
+02:41:12 [INFO] Epoch=4/10|step=110000|val_loss=0.9023|time=4.68e+02s|New best_val_loss=0.9023
+02:51:02 [INFO] Epoch=4/10|step=110500|val_loss=0.9108|time=4.67e+02s
+03:00:49 [INFO] Epoch=4/10|step=111000|val_loss=0.9101|time=4.67e+02s
+03:10:41 [INFO] Epoch=4/10|step=111500|val_loss=0.9102|time=4.68e+02s
+03:20:31 [INFO] Epoch=4/10|step=112000|val_loss= 0.906|time=4.68e+02s
+03:30:22 [INFO] Epoch=4/10|step=112500|val_loss=0.9085|time=4.68e+02s
+03:40:09 [INFO] Epoch=4/10|step=113000|val_loss=0.9061|time=4.67e+02s
+03:49:51 [INFO] Epoch=4/10|step=113500|val_loss= 0.907|time=4.68e+02s
+03:59:43 [INFO] Epoch=4/10|step=114000|val_loss=0.9024|time=4.68e+02s
+04:09:35 [INFO] Epoch=4/10|step=114500|val_loss=0.9038|time=4.68e+02s
+04:19:26 [INFO] Epoch=4/10|step=115000|val_loss=0.9071|time=4.68e+02s
+04:29:14 [INFO] Epoch=4/10|step=115500|val_loss=0.9054|time=4.68e+02s
+04:39:03 [INFO] Epoch=4/10|step=116000|val_loss=0.9055|time=4.67e+02s
+04:48:56 [INFO] Epoch=4/10|step=116500|val_loss=0.9003|time=4.68e+02s|New best_val_loss=0.9003
+04:58:45 [INFO] Epoch=4/10|step=117000|val_loss=0.9079|time=4.68e+02s
+05:08:33 [INFO] Epoch=4/10|step=117500|val_loss=0.9082|time=4.67e+02s
+05:18:22 [INFO] Epoch=4/10|step=118000|val_loss=0.9019|time=4.68e+02s
+05:28:11 [INFO] Epoch=4/10|step=118500|val_loss=0.9055|time=4.67e+02s
+05:38:02 [INFO] Epoch=4/10|step=119000|val_loss=0.9036|time=4.67e+02s
+05:47:52 [INFO] Epoch=4/10|step=119500|val_loss=0.9023|time=4.68e+02s
+05:57:41 [INFO] Epoch=4/10|step=120000|val_loss=0.9052|time=4.68e+02s
+06:07:32 [INFO] Epoch=4/10|step=120500|val_loss=0.8977|time=4.68e+02s|New best_val_loss=0.8977
+06:17:22 [INFO] Epoch=4/10|step=121000|val_loss=0.9034|time=4.68e+02s
+06:27:11 [INFO] Epoch=4/10|step=121500|val_loss=0.8986|time=4.68e+02s
+06:37:01 [INFO] Epoch=4/10|step=122000|val_loss=0.9021|time=4.68e+02s
+06:46:52 [INFO] Epoch=4/10|step=122500|val_loss=0.9046|time=4.68e+02s
+06:56:43 [INFO] Epoch=4/10|step=123000|val_loss=0.9103|time=4.68e+02s
+07:06:34 [INFO] Epoch=4/10|step=123500|val_loss=0.9025|time=4.68e+02s
+07:16:22 [INFO] Epoch=4/10|step=124000|val_loss=0.9044|time=4.68e+02s
+07:26:13 [INFO] Epoch=4/10|step=124500|val_loss=0.9062|time=4.67e+02s
+07:36:02 [INFO] Epoch=4/10|step=125000|val_loss=0.9019|time=4.68e+02s
+07:45:53 [INFO] Epoch=4/10|step=125500|val_loss=0.8998|time=4.67e+02s
+07:55:45 [INFO] Epoch=4/10|step=126000|val_loss=0.9028|time=4.68e+02s
+08:05:36 [INFO] Epoch=4/10|step=126500|val_loss=0.8975|time=4.67e+02s|New best_val_loss=0.8975
+08:15:26 [INFO] Epoch=4/10|step=127000|val_loss=0.9016|time=4.67e+02s
+08:25:18 [INFO] Epoch=4/10|step=127500|val_loss=0.8977|time=4.68e+02s
+08:35:09 [INFO] Epoch=4/10|step=128000|val_loss=0.9028|time=4.68e+02s
+08:44:58 [INFO] Epoch=4/10|step=128500|val_loss=0.9048|time=4.68e+02s
+08:54:48 [INFO] Epoch=4/10|step=129000|val_loss=0.9002|time=4.68e+02s
+09:04:39 [INFO] Epoch=4/10|step=129500|val_loss=0.9015|time=4.67e+02s
+09:14:28 [INFO] Epoch=4/10|step=130000|val_loss=0.8991|time=4.68e+02s
+09:24:15 [INFO] Epoch=4/10|step=130500|val_loss=0.8995|time=4.67e+02s
+09:34:09 [INFO] Epoch=4/10|step=131000|val_loss=0.8938|time=4.68e+02s|New best_val_loss=0.8938
+09:44:00 [INFO] Epoch=4/10|step=131500|val_loss=0.8999|time=4.68e+02s
+09:53:49 [INFO] Epoch=4/10|step=132000|val_loss=0.9024|time=4.67e+02s
+10:03:33 [INFO] Epoch=4/10|step=132500|val_loss=0.8989|time=4.67e+02s
+10:13:15 [INFO] Epoch=4/10|step=133000|val_loss=0.9009|time=4.67e+02s
+10:23:08 [INFO] Epoch=4/10|step=133500|val_loss=0.9019|time=4.68e+02s
+10:33:00 [INFO] Epoch=4/10|step=134000|val_loss=0.9005|time=4.68e+02s
+10:42:54 [INFO] Epoch=4/10|step=134500|val_loss= 0.901|time=4.67e+02s
+10:52:49 [INFO] Epoch=4/10|step=135000|val_loss=0.8996|time=4.67e+02s
+11:02:40 [INFO] Epoch=4/10|step=135500|val_loss=0.8958|time=4.68e+02s
+11:12:32 [INFO] Epoch=4/10|step=136000|val_loss=0.9017|time=4.67e+02s
+11:22:24 [INFO] Epoch=4/10|step=136500|val_loss=0.9008|time=4.68e+02s
+11:32:14 [INFO] Epoch=4/10|step=137000|val_loss=0.9021|time=4.68e+02s
+11:42:29 [INFO] Epoch=5/10|step=137500|val_loss=0.8983|time=4.89e+02s
+11:52:20 [INFO] Epoch=5/10|step=138000|val_loss=0.8996|time=4.68e+02s
+12:02:11 [INFO] Epoch=5/10|step=138500|val_loss=0.8972|time=4.68e+02s
+12:12:01 [INFO] Epoch=5/10|step=139000|val_loss=0.8959|time=4.68e+02s
+12:21:52 [INFO] Epoch=5/10|step=139500|val_loss=0.8987|time=4.68e+02s
+12:31:41 [INFO] Epoch=5/10|step=140000|val_loss=0.9023|time=4.68e+02s
+12:41:32 [INFO] Epoch=5/10|step=140500|val_loss=0.8989|time=4.67e+02s
+12:51:17 [INFO] Epoch=5/10|step=141000|val_loss=0.8978|time=4.68e+02s
+13:01:00 [INFO] Epoch=5/10|step=141500|val_loss=0.9038|time=4.68e+02s
+13:10:52 [INFO] Epoch=5/10|step=142000|val_loss=0.8979|time=4.68e+02s
+13:20:43 [INFO] Epoch=5/10|step=142500|val_loss=0.8967|time=4.69e+02s
+13:30:31 [INFO] Epoch=5/10|step=143000|val_loss=0.8993|time=4.68e+02s
+13:40:22 [INFO] Epoch=5/10|step=143500|val_loss=0.8947|time=4.68e+02s
+13:50:12 [INFO] Epoch=5/10|step=144000|val_loss=0.8982|time=4.68e+02s
+14:00:00 [INFO] Epoch=5/10|step=144500|val_loss=0.8997|time=4.68e+02s
+14:09:51 [INFO] Epoch=5/10|step=145000|val_loss=0.8966|time=4.68e+02s
+14:19:41 [INFO] Epoch=5/10|step=145500|val_loss=0.8948|time=4.68e+02s
+14:29:31 [INFO] Epoch=5/10|step=146000|val_loss=0.8962|time=4.68e+02s
+14:39:22 [INFO] Epoch=5/10|step=146500|val_loss=0.8938|time=4.68e+02s|New best_val_loss=0.8938
+14:49:14 [INFO] Epoch=5/10|step=147000|val_loss= 0.898|time=4.68e+02s
+14:59:04 [INFO] Epoch=5/10|step=147500|val_loss=0.8974|time=4.68e+02s
+15:08:52 [INFO] Epoch=5/10|step=148000|val_loss= 0.893|time=4.68e+02s|New best_val_loss= 0.893
+15:18:36 [INFO] Epoch=5/10|step=148500|val_loss=0.8914|time=4.67e+02s|New best_val_loss=0.8914
+15:28:24 [INFO] Epoch=5/10|step=149000|val_loss=0.8962|time=4.68e+02s
+15:38:16 [INFO] Epoch=5/10|step=149500|val_loss=0.8943|time=4.68e+02s
+15:48:05 [INFO] Epoch=5/10|step=150000|val_loss=0.8961|time=4.68e+02s
+15:57:53 [INFO] Epoch=5/10|step=150500|val_loss=0.8964|time=4.66e+02s
+16:07:43 [INFO] Epoch=5/10|step=151000|val_loss=0.8933|time=4.67e+02s
+16:17:35 [INFO] Epoch=5/10|step=151500|val_loss=0.8974|time=4.68e+02s
+16:27:25 [INFO] Epoch=5/10|step=152000|val_loss=0.8934|time=4.67e+02s
+16:37:14 [INFO] Epoch=5/10|step=152500|val_loss=0.8935|time=4.68e+02s
+16:47:05 [INFO] Epoch=5/10|step=153000|val_loss=0.8957|time=4.68e+02s
+16:56:54 [INFO] Epoch=5/10|step=153500|val_loss= 0.896|time=4.67e+02s
+17:06:45 [INFO] Epoch=5/10|step=154000|val_loss=0.8951|time=4.68e+02s
+17:16:33 [INFO] Epoch=5/10|step=154500|val_loss=0.8956|time=4.67e+02s
+17:26:22 [INFO] Epoch=5/10|step=155000|val_loss= 0.893|time=4.68e+02s
+17:36:11 [INFO] Epoch=5/10|step=155500|val_loss=0.8981|time=4.67e+02s
+17:46:01 [INFO] Epoch=5/10|step=156000|val_loss= 0.895|time=4.68e+02s
+17:55:52 [INFO] Epoch=5/10|step=156500|val_loss=0.8989|time=4.67e+02s
+18:05:43 [INFO] Epoch=5/10|step=157000|val_loss=0.8953|time=4.67e+02s
+18:15:34 [INFO] Epoch=5/10|step=157500|val_loss=0.8932|time=4.67e+02s
+18:25:24 [INFO] Epoch=5/10|step=158000|val_loss= 0.893|time=4.68e+02s
+18:35:13 [INFO] Epoch=5/10|step=158500|val_loss=0.8963|time=4.68e+02s
+18:45:04 [INFO] Epoch=5/10|step=159000|val_loss=0.8989|time=4.68e+02s
+18:54:55 [INFO] Epoch=5/10|step=159500|val_loss=0.8959|time=4.68e+02s
+19:04:46 [INFO] Epoch=5/10|step=160000|val_loss=0.8922|time=4.68e+02s
+19:14:38 [INFO] Epoch=5/10|step=160500|val_loss=0.8981|time=4.68e+02s
+19:24:26 [INFO] Epoch=5/10|step=161000|val_loss=0.8983|time=4.67e+02s
+19:34:10 [INFO] Epoch=5/10|step=161500|val_loss=0.8927|time=4.68e+02s
+19:44:01 [INFO] Epoch=5/10|step=162000|val_loss=0.8882|time=4.67e+02s|New best_val_loss=0.8882
+19:53:52 [INFO] Epoch=5/10|step=162500|val_loss=0.8963|time=4.68e+02s
+20:03:42 [INFO] Epoch=5/10|step=163000|val_loss=0.8869|time=4.67e+02s|New best_val_loss=0.8869
+20:13:33 [INFO] Epoch=5/10|step=163500|val_loss=0.8951|time=4.67e+02s
+20:23:22 [INFO] Epoch=5/10|step=164000|val_loss=0.8918|time=4.68e+02s
+20:33:11 [INFO] Epoch=5/10|step=164500|val_loss=0.8979|time=4.68e+02s
+20:43:00 [INFO] Epoch=5/10|step=165000|val_loss=0.8933|time=4.67e+02s
+20:52:49 [INFO] Epoch=5/10|step=165500|val_loss= 0.891|time=4.67e+02s
+21:02:39 [INFO] Epoch=5/10|step=166000|val_loss=0.8923|time=4.67e+02s
+21:12:31 [INFO] Epoch=5/10|step=166500|val_loss=0.8944|time=4.68e+02s
+21:22:22 [INFO] Epoch=5/10|step=167000|val_loss=0.8904|time=4.68e+02s
+21:32:10 [INFO] Epoch=5/10|step=167500|val_loss=0.8903|time=4.68e+02s
+21:41:55 [INFO] Epoch=5/10|step=168000|val_loss=0.8889|time=4.68e+02s
+21:51:46 [INFO] Epoch=5/10|step=168500|val_loss=0.8918|time=4.67e+02s
+22:01:35 [INFO] Epoch=5/10|step=169000|val_loss=0.8934|time=4.67e+02s
+22:11:25 [INFO] Epoch=5/10|step=169500|val_loss=0.8926|time=4.68e+02s
+22:21:12 [INFO] Epoch=5/10|step=170000|val_loss=0.8943|time=4.67e+02s
+22:31:05 [INFO] Epoch=5/10|step=170500|val_loss=0.8875|time=4.68e+02s
+22:40:55 [INFO] Epoch=5/10|step=171000|val_loss=0.8831|time=4.67e+02s|New best_val_loss=0.8831
+22:50:46 [INFO] Epoch=5/10|step=171500|val_loss=0.8908|time=4.68e+02s
+23:01:01 [INFO] Epoch=6/10|step=172000|val_loss=0.8924|time=4.93e+02s
+23:10:55 [INFO] Epoch=6/10|step=172500|val_loss=0.8932|time=4.68e+02s
+23:20:51 [INFO] Epoch=6/10|step=173000|val_loss=0.8925|time=4.68e+02s
+23:30:41 [INFO] Epoch=6/10|step=173500|val_loss=  0.89|time=4.67e+02s
+23:40:30 [INFO] Epoch=6/10|step=174000|val_loss=0.8901|time=4.67e+02s
+23:50:24 [INFO] Epoch=6/10|step=174500|val_loss= 0.893|time=4.68e+02s
+00:00:12 [INFO] Epoch=6/10|step=175000|val_loss=0.8943|time=4.68e+02s
+00:10:01 [INFO] Epoch=6/10|step=175500|val_loss=0.8932|time=4.68e+02s
+00:19:49 [INFO] Epoch=6/10|step=176000|val_loss=0.8866|time=4.67e+02s
+00:29:41 [INFO] Epoch=6/10|step=176500|val_loss=0.8926|time=4.68e+02s
+00:39:32 [INFO] Epoch=6/10|step=177000|val_loss=0.8904|time=4.68e+02s
+00:49:21 [INFO] Epoch=6/10|step=177500|val_loss=0.8856|time=4.68e+02s
+00:59:14 [INFO] Epoch=6/10|step=178000|val_loss=0.8854|time=4.68e+02s
+01:09:06 [INFO] Epoch=6/10|step=178500|val_loss=0.8894|time=4.68e+02s
+01:18:56 [INFO] Epoch=6/10|step=179000|val_loss=0.8912|time=4.68e+02s
+01:28:49 [INFO] Epoch=6/10|step=179500|val_loss=0.8889|time=4.68e+02s
+01:38:40 [INFO] Epoch=6/10|step=180000|val_loss=0.8896|time=4.68e+02s
+01:48:28 [INFO] Epoch=6/10|step=180500|val_loss=0.8899|time=4.68e+02s
+01:58:18 [INFO] Epoch=6/10|step=181000|val_loss=0.8864|time=4.68e+02s
+02:08:06 [INFO] Epoch=6/10|step=181500|val_loss=0.8888|time=4.68e+02s
+02:17:58 [INFO] Epoch=6/10|step=182000|val_loss=0.8889|time=4.68e+02s
+02:27:50 [INFO] Epoch=6/10|step=182500|val_loss=0.8928|time=4.68e+02s
+02:37:42 [INFO] Epoch=6/10|step=183000|val_loss=0.8902|time=4.68e+02s
+02:47:35 [INFO] Epoch=6/10|step=183500|val_loss= 0.883|time=4.68e+02s|New best_val_loss= 0.883
+02:57:25 [INFO] Epoch=6/10|step=184000|val_loss=0.8901|time=4.67e+02s
+03:07:14 [INFO] Epoch=6/10|step=184500|val_loss=0.8965|time=4.67e+02s
+03:17:05 [INFO] Epoch=6/10|step=185000|val_loss= 0.886|time=4.68e+02s
+03:26:53 [INFO] Epoch=6/10|step=185500|val_loss=0.8911|time=4.68e+02s
+03:36:43 [INFO] Epoch=6/10|step=186000|val_loss=0.8918|time=4.68e+02s
+03:46:32 [INFO] Epoch=6/10|step=186500|val_loss=0.8884|time=4.68e+02s
+03:56:25 [INFO] Epoch=6/10|step=187000|val_loss=0.8908|time=4.68e+02s
+04:06:13 [INFO] Epoch=6/10|step=187500|val_loss=0.8862|time=4.68e+02s
+04:16:02 [INFO] Epoch=6/10|step=188000|val_loss=0.8884|time=4.67e+02s
+04:25:54 [INFO] Epoch=6/10|step=188500|val_loss=0.8877|time=4.68e+02s
+04:35:47 [INFO] Epoch=6/10|step=189000|val_loss=0.8833|time=4.68e+02s
+04:45:36 [INFO] Epoch=6/10|step=189500|val_loss=0.8886|time=4.68e+02s
+04:55:26 [INFO] Epoch=6/10|step=190000|val_loss=0.8938|time=4.68e+02s
+05:05:14 [INFO] Epoch=6/10|step=190500|val_loss=0.8889|time=4.68e+02s
+05:15:05 [INFO] Epoch=6/10|step=191000|val_loss=0.8885|time=4.68e+02s
+05:24:56 [INFO] Epoch=6/10|step=191500|val_loss=0.8878|time=4.68e+02s
+05:34:46 [INFO] Epoch=6/10|step=192000|val_loss=0.8887|time=4.68e+02s
+05:44:36 [INFO] Epoch=6/10|step=192500|val_loss=0.8902|time=4.68e+02s
+05:54:30 [INFO] Epoch=6/10|step=193000|val_loss=0.8889|time=4.68e+02s
+06:04:21 [INFO] Epoch=6/10|step=193500|val_loss=0.8873|time=4.68e+02s
+06:14:11 [INFO] Epoch=6/10|step=194000|val_loss=0.8854|time=4.68e+02s
+06:24:00 [INFO] Epoch=6/10|step=194500|val_loss= 0.887|time=4.68e+02s
+06:33:51 [INFO] Epoch=6/10|step=195000|val_loss=0.8832|time=4.68e+02s
+06:43:33 [INFO] Epoch=6/10|step=195500|val_loss=0.8898|time=4.67e+02s
+06:53:22 [INFO] Epoch=6/10|step=196000|val_loss=0.8851|time=4.68e+02s
+07:03:13 [INFO] Epoch=6/10|step=196500|val_loss=0.8846|time=4.67e+02s
+07:13:04 [INFO] Epoch=6/10|step=197000|val_loss= 0.885|time=4.68e+02s
+07:22:54 [INFO] Epoch=6/10|step=197500|val_loss=0.8908|time=4.68e+02s
+07:32:44 [INFO] Epoch=6/10|step=198000|val_loss=0.8873|time=4.68e+02s
+07:42:34 [INFO] Epoch=6/10|step=198500|val_loss=0.8849|time=4.67e+02s
+07:52:23 [INFO] Epoch=6/10|step=199000|val_loss=0.8898|time=4.67e+02s
+08:02:14 [INFO] Epoch=6/10|step=199500|val_loss=0.8824|time=4.68e+02s|New best_val_loss=0.8824
+08:12:03 [INFO] Epoch=6/10|step=200000|val_loss=0.8878|time=4.68e+02s
+08:21:52 [INFO] Epoch=6/10|step=200500|val_loss=0.8847|time=4.68e+02s
+08:31:43 [INFO] Epoch=6/10|step=201000|val_loss=0.8831|time=4.68e+02s
+08:41:31 [INFO] Epoch=6/10|step=201500|val_loss=0.8837|time=4.67e+02s
+08:51:11 [INFO] Epoch=6/10|step=202000|val_loss=0.8849|time=4.68e+02s
+09:01:03 [INFO] Epoch=6/10|step=202500|val_loss=0.8891|time=4.67e+02s
+09:10:55 [INFO] Epoch=6/10|step=203000|val_loss=0.8812|time=4.67e+02s|New best_val_loss=0.8812
+09:20:48 [INFO] Epoch=6/10|step=203500|val_loss=0.8942|time=4.68e+02s
+09:30:43 [INFO] Epoch=6/10|step=204000|val_loss=0.8857|time=4.68e+02s
+09:40:36 [INFO] Epoch=6/10|step=204500|val_loss=0.8834|time=4.68e+02s
+09:50:25 [INFO] Epoch=6/10|step=205000|val_loss=0.8846|time=4.67e+02s
+10:00:15 [INFO] Epoch=6/10|step=205500|val_loss=0.8852|time=4.68e+02s
+10:10:05 [INFO] Epoch=6/10|step=206000|val_loss=0.8843|time=4.68e+02s
+10:20:17 [INFO] Epoch=7/10|step=206500|val_loss= 0.884|time=4.9e+02s
+10:30:08 [INFO] Epoch=7/10|step=207000|val_loss=0.8866|time=4.68e+02s
+10:40:00 [INFO] Epoch=7/10|step=207500|val_loss=0.8846|time=4.68e+02s
+10:49:54 [INFO] Epoch=7/10|step=208000|val_loss=0.8861|time=4.68e+02s
+10:59:47 [INFO] Epoch=7/10|step=208500|val_loss=0.8835|time=4.68e+02s
+11:09:36 [INFO] Epoch=7/10|step=209000|val_loss=0.8824|time=4.68e+02s
+11:19:26 [INFO] Epoch=7/10|step=209500|val_loss=0.8857|time=4.67e+02s
+11:29:20 [INFO] Epoch=7/10|step=210000|val_loss=0.8883|time=4.67e+02s
+11:38:57 [INFO] Epoch=7/10|step=210500|val_loss=0.8857|time=4.68e+02s
+11:48:46 [INFO] Epoch=7/10|step=211000|val_loss=0.8852|time=4.68e+02s
+11:58:37 [INFO] Epoch=7/10|step=211500|val_loss=0.8878|time=4.68e+02s
+12:08:28 [INFO] Epoch=7/10|step=212000|val_loss=0.8859|time=4.68e+02s
+12:18:23 [INFO] Epoch=7/10|step=212500|val_loss=0.8864|time=4.68e+02s
+12:28:17 [INFO] Epoch=7/10|step=213000|val_loss=0.8859|time=4.68e+02s
+12:38:08 [INFO] Epoch=7/10|step=213500|val_loss=0.8832|time=4.68e+02s
+12:48:03 [INFO] Epoch=7/10|step=214000|val_loss=0.8828|time=4.68e+02s
+12:57:51 [INFO] Epoch=7/10|step=214500|val_loss=0.8833|time=4.68e+02s
+13:07:45 [INFO] Epoch=7/10|step=215000|val_loss=0.8827|time=4.68e+02s
+13:17:36 [INFO] Epoch=7/10|step=215500|val_loss=0.8862|time=4.68e+02s
+13:27:26 [INFO] Epoch=7/10|step=216000|val_loss= 0.882|time=4.67e+02s
+13:37:19 [INFO] Epoch=7/10|step=216500|val_loss=0.8839|time=4.68e+02s
+13:47:09 [INFO] Epoch=7/10|step=217000|val_loss=0.8819|time=4.67e+02s
+13:56:48 [INFO] Epoch=7/10|step=217500|val_loss=0.8797|time=4.68e+02s|New best_val_loss=0.8797
+14:06:40 [INFO] Epoch=7/10|step=218000|val_loss=0.8835|time=4.68e+02s
+14:16:30 [INFO] Epoch=7/10|step=218500|val_loss=0.8825|time=4.68e+02s
+14:26:18 [INFO] Epoch=7/10|step=219000|val_loss=0.8877|time=4.67e+02s
+14:36:07 [INFO] Epoch=7/10|step=219500|val_loss=0.8844|time=4.68e+02s
+14:45:57 [INFO] Epoch=7/10|step=220000|val_loss=0.8848|time=4.68e+02s
+14:55:48 [INFO] Epoch=7/10|step=220500|val_loss=0.8819|time=4.68e+02s
+15:05:38 [INFO] Epoch=7/10|step=221000|val_loss=0.8834|time=4.67e+02s
+15:15:30 [INFO] Epoch=7/10|step=221500|val_loss=0.8859|time=4.68e+02s
+15:25:20 [INFO] Epoch=7/10|step=222000|val_loss=0.8851|time=4.68e+02s
+15:35:12 [INFO] Epoch=7/10|step=222500|val_loss=0.8843|time=4.68e+02s
+15:45:04 [INFO] Epoch=7/10|step=223000|val_loss=0.8869|time=4.67e+02s
+15:54:56 [INFO] Epoch=7/10|step=223500|val_loss=0.8831|time=4.68e+02s
+16:04:44 [INFO] Epoch=7/10|step=224000|val_loss=0.8848|time=4.67e+02s
+16:14:34 [INFO] Epoch=7/10|step=224500|val_loss= 0.884|time=4.68e+02s
+16:24:24 [INFO] Epoch=7/10|step=225000|val_loss=0.8857|time=4.68e+02s
+16:34:13 [INFO] Epoch=7/10|step=225500|val_loss=0.8822|time=4.68e+02s
+16:44:05 [INFO] Epoch=7/10|step=226000|val_loss=0.8795|time=4.68e+02s|New best_val_loss=0.8795
+16:53:55 [INFO] Epoch=7/10|step=226500|val_loss=0.8801|time=4.68e+02s
+17:03:45 [INFO] Epoch=7/10|step=227000|val_loss=0.8839|time=4.68e+02s
+17:13:33 [INFO] Epoch=7/10|step=227500|val_loss=0.8892|time=4.68e+02s
+17:23:25 [INFO] Epoch=7/10|step=228000|val_loss=0.8825|time=4.68e+02s
+17:33:13 [INFO] Epoch=7/10|step=228500|val_loss= 0.883|time=4.67e+02s
+17:43:01 [INFO] Epoch=7/10|step=229000|val_loss=0.8816|time=4.67e+02s
+17:52:49 [INFO] Epoch=7/10|step=229500|val_loss=0.8797|time=4.67e+02s
+18:02:39 [INFO] Epoch=7/10|step=230000|val_loss=0.8845|time=4.68e+02s
+18:12:29 [INFO] Epoch=7/10|step=230500|val_loss=0.8841|time=4.67e+02s
+18:22:18 [INFO] Epoch=7/10|step=231000|val_loss= 0.881|time=4.67e+02s
+18:32:09 [INFO] Epoch=7/10|step=231500|val_loss=0.8824|time=4.68e+02s
+18:41:59 [INFO] Epoch=7/10|step=232000|val_loss=0.8824|time=4.68e+02s
+18:51:48 [INFO] Epoch=7/10|step=232500|val_loss=0.8811|time=4.68e+02s
+19:01:39 [INFO] Epoch=7/10|step=233000|val_loss=0.8773|time=4.68e+02s|New best_val_loss=0.8773
+19:11:26 [INFO] Epoch=7/10|step=233500|val_loss=0.8783|time=4.66e+02s
+19:21:18 [INFO] Epoch=7/10|step=234000|val_loss=0.8829|time=4.68e+02s
+19:31:12 [INFO] Epoch=7/10|step=234500|val_loss=0.8843|time=4.68e+02s
+19:41:07 [INFO] Epoch=7/10|step=235000|val_loss=0.8812|time=4.67e+02s
+19:50:56 [INFO] Epoch=7/10|step=235500|val_loss=0.8842|time=4.68e+02s
+20:00:47 [INFO] Epoch=7/10|step=236000|val_loss=0.8784|time=4.67e+02s
+20:10:38 [INFO] Epoch=7/10|step=236500|val_loss=0.8834|time=4.68e+02s
+20:20:24 [INFO] Epoch=7/10|step=237000|val_loss=0.8785|time=4.67e+02s
+20:30:15 [INFO] Epoch=7/10|step=237500|val_loss= 0.878|time=4.68e+02s
+20:40:04 [INFO] Epoch=7/10|step=238000|val_loss=0.8843|time=4.68e+02s
+20:49:56 [INFO] Epoch=7/10|step=238500|val_loss=0.8821|time=4.68e+02s
+20:59:47 [INFO] Epoch=7/10|step=239000|val_loss=0.8828|time=4.68e+02s
+21:09:39 [INFO] Epoch=7/10|step=239500|val_loss= 0.879|time=4.68e+02s
+21:19:28 [INFO] Epoch=7/10|step=240000|val_loss=0.8804|time=4.68e+02s
+21:29:20 [INFO] Epoch=7/10|step=240500|val_loss=  0.88|time=4.68e+02s
+21:39:33 [INFO] Epoch=8/10|step=241000|val_loss=0.8797|time=4.9e+02s
+21:49:22 [INFO] Epoch=8/10|step=241500|val_loss=0.8848|time=4.68e+02s
+21:59:12 [INFO] Epoch=8/10|step=242000|val_loss=0.8778|time=4.68e+02s
+22:09:05 [INFO] Epoch=8/10|step=242500|val_loss=0.8841|time=4.68e+02s
+22:18:55 [INFO] Epoch=8/10|step=243000|val_loss= 0.883|time=4.68e+02s
+22:28:47 [INFO] Epoch=8/10|step=243500|val_loss=0.8827|time=4.68e+02s
+22:38:40 [INFO] Epoch=8/10|step=244000|val_loss=0.8795|time=4.67e+02s
+22:48:30 [INFO] Epoch=8/10|step=244500|val_loss=0.8797|time=4.68e+02s
+22:58:16 [INFO] Epoch=8/10|step=245000|val_loss=0.8829|time=4.68e+02s
+23:08:06 [INFO] Epoch=8/10|step=245500|val_loss=0.8809|time=4.68e+02s
+23:17:57 [INFO] Epoch=8/10|step=246000|val_loss=0.8786|time=4.68e+02s
+23:27:49 [INFO] Epoch=8/10|step=246500|val_loss=0.8802|time=4.68e+02s
+23:37:40 [INFO] Epoch=8/10|step=247000|val_loss=0.8809|time=4.68e+02s
+23:47:32 [INFO] Epoch=8/10|step=247500|val_loss=0.8785|time=4.68e+02s
+23:57:22 [INFO] Epoch=8/10|step=248000|val_loss= 0.885|time=4.68e+02s
+00:07:13 [INFO] Epoch=8/10|step=248500|val_loss=0.8823|time=4.68e+02s
+00:17:02 [INFO] Epoch=8/10|step=249000|val_loss=0.8837|time=4.68e+02s
+00:26:55 [INFO] Epoch=8/10|step=249500|val_loss=0.8745|time=4.68e+02s|New best_val_loss=0.8745
+00:36:46 [INFO] Epoch=8/10|step=250000|val_loss=0.8805|time=4.67e+02s
+00:46:37 [INFO] Epoch=8/10|step=250500|val_loss=0.8778|time=4.68e+02s
+00:56:26 [INFO] Epoch=8/10|step=251000|val_loss=0.8809|time=4.67e+02s
+01:06:09 [INFO] Epoch=8/10|step=251500|val_loss=0.8808|time=4.68e+02s
+01:15:54 [INFO] Epoch=8/10|step=252000|val_loss=0.8811|time=4.67e+02s
+01:25:42 [INFO] Epoch=8/10|step=252500|val_loss=0.8827|time=4.67e+02s
+01:35:30 [INFO] Epoch=8/10|step=253000|val_loss=0.8769|time=4.67e+02s
+01:45:20 [INFO] Epoch=8/10|step=253500|val_loss= 0.879|time=4.68e+02s
+01:55:09 [INFO] Epoch=8/10|step=254000|val_loss=0.8823|time=4.67e+02s
+02:04:58 [INFO] Epoch=8/10|step=254500|val_loss=0.8748|time=4.67e+02s
+02:14:49 [INFO] Epoch=8/10|step=255000|val_loss=0.8753|time=4.67e+02s
+02:24:39 [INFO] Epoch=8/10|step=255500|val_loss=0.8765|time=4.67e+02s
+02:34:30 [INFO] Epoch=8/10|step=256000|val_loss=0.8838|time=4.68e+02s
+02:44:18 [INFO] Epoch=8/10|step=256500|val_loss=0.8807|time=4.67e+02s
+02:54:09 [INFO] Epoch=8/10|step=257000|val_loss=0.8745|time=4.67e+02s|New best_val_loss=0.8745
+03:04:00 [INFO] Epoch=8/10|step=257500|val_loss=0.8808|time=4.68e+02s
+03:13:50 [INFO] Epoch=8/10|step=258000|val_loss=0.8791|time=4.67e+02s
+03:23:41 [INFO] Epoch=8/10|step=258500|val_loss=0.8777|time=4.68e+02s
+03:33:32 [INFO] Epoch=8/10|step=259000|val_loss=  0.88|time=4.68e+02s
+03:43:22 [INFO] Epoch=8/10|step=259500|val_loss=0.8747|time=4.69e+02s
+03:53:14 [INFO] Epoch=8/10|step=260000|val_loss=0.8818|time=4.68e+02s
+04:03:07 [INFO] Epoch=8/10|step=260500|val_loss=0.8787|time=4.68e+02s
+04:12:57 [INFO] Epoch=8/10|step=261000|val_loss= 0.884|time=4.67e+02s
+04:22:48 [INFO] Epoch=8/10|step=261500|val_loss=0.8771|time=4.68e+02s
+04:32:38 [INFO] Epoch=8/10|step=262000|val_loss=0.8818|time=4.68e+02s
+04:42:27 [INFO] Epoch=8/10|step=262500|val_loss=0.8755|time=4.68e+02s
+04:52:16 [INFO] Epoch=8/10|step=263000|val_loss=0.8755|time=4.68e+02s
+05:02:04 [INFO] Epoch=8/10|step=263500|val_loss=0.8825|time=4.68e+02s
+05:11:56 [INFO] Epoch=8/10|step=264000|val_loss= 0.883|time=4.68e+02s
+05:21:43 [INFO] Epoch=8/10|step=264500|val_loss=0.8777|time=4.66e+02s
+05:31:32 [INFO] Epoch=8/10|step=265000|val_loss=0.8788|time=4.68e+02s
+05:41:21 [INFO] Epoch=8/10|step=265500|val_loss=0.8809|time=4.68e+02s
+05:51:11 [INFO] Epoch=8/10|step=266000|val_loss=0.8832|time=4.68e+02s
+06:01:02 [INFO] Epoch=8/10|step=266500|val_loss=0.8732|time=4.68e+02s|New best_val_loss=0.8732
+06:10:54 [INFO] Epoch=8/10|step=267000|val_loss=0.8819|time=4.67e+02s
+06:20:44 [INFO] Epoch=8/10|step=267500|val_loss=0.8768|time=4.68e+02s
+06:30:36 [INFO] Epoch=8/10|step=268000|val_loss=  0.88|time=4.68e+02s
+06:40:31 [INFO] Epoch=8/10|step=268500|val_loss=0.8767|time=4.68e+02s
+06:50:24 [INFO] Epoch=8/10|step=269000|val_loss=0.8763|time=4.68e+02s
+07:00:17 [INFO] Epoch=8/10|step=269500|val_loss=0.8766|time=4.67e+02s
+07:10:06 [INFO] Epoch=8/10|step=270000|val_loss=0.8802|time=4.67e+02s
+07:19:55 [INFO] Epoch=8/10|step=270500|val_loss=0.8796|time=4.67e+02s
+07:29:44 [INFO] Epoch=8/10|step=271000|val_loss=0.8768|time=4.67e+02s
+07:39:32 [INFO] Epoch=8/10|step=271500|val_loss=0.8787|time=4.68e+02s
+07:49:23 [INFO] Epoch=8/10|step=272000|val_loss=0.8774|time=4.67e+02s
+07:59:12 [INFO] Epoch=8/10|step=272500|val_loss=0.8769|time=4.67e+02s
+08:09:03 [INFO] Epoch=8/10|step=273000|val_loss=0.8809|time=4.68e+02s
+08:18:53 [INFO] Epoch=8/10|step=273500|val_loss=0.8789|time=4.67e+02s
+08:28:45 [INFO] Epoch=8/10|step=274000|val_loss=0.8779|time=4.68e+02s
+08:38:34 [INFO] Epoch=8/10|step=274500|val_loss=0.8778|time=4.68e+02s
+08:48:47 [INFO] Epoch=9/10|step=275000|val_loss=0.8777|time=4.9e+02s
+08:58:36 [INFO] Epoch=9/10|step=275500|val_loss=0.8751|time=4.68e+02s
+09:08:26 [INFO] Epoch=9/10|step=276000|val_loss=0.8775|time=4.68e+02s
+09:18:18 [INFO] Epoch=9/10|step=276500|val_loss=0.8791|time=4.69e+02s
+09:28:09 [INFO] Epoch=9/10|step=277000|val_loss= 0.876|time=4.68e+02s
+09:37:56 [INFO] Epoch=9/10|step=277500|val_loss=0.8787|time=4.67e+02s
+09:47:40 [INFO] Epoch=9/10|step=278000|val_loss=0.8754|time=4.68e+02s
+09:57:32 [INFO] Epoch=9/10|step=278500|val_loss=0.8758|time=4.68e+02s
+10:07:21 [INFO] Epoch=9/10|step=279000|val_loss=0.8813|time=4.68e+02s
+10:17:10 [INFO] Epoch=9/10|step=279500|val_loss=0.8745|time=4.68e+02s
+10:26:59 [INFO] Epoch=9/10|step=280000|val_loss=0.8824|time=4.68e+02s
+10:36:49 [INFO] Epoch=9/10|step=280500|val_loss=0.8748|time=4.68e+02s
+10:46:43 [INFO] Epoch=9/10|step=281000|val_loss=0.8749|time=4.68e+02s
+10:56:34 [INFO] Epoch=9/10|step=281500|val_loss=0.8736|time=4.68e+02s
+11:06:25 [INFO] Epoch=9/10|step=282000|val_loss=0.8771|time=4.68e+02s
+11:16:16 [INFO] Epoch=9/10|step=282500|val_loss=0.8754|time=4.68e+02s
+11:26:05 [INFO] Epoch=9/10|step=283000|val_loss=0.8733|time=4.67e+02s
+11:35:53 [INFO] Epoch=9/10|step=283500|val_loss=0.8805|time=4.68e+02s
+11:45:42 [INFO] Epoch=9/10|step=284000|val_loss=0.8783|time=4.68e+02s
+11:55:33 [INFO] Epoch=9/10|step=284500|val_loss=0.8774|time=4.67e+02s
+12:05:16 [INFO] Epoch=9/10|step=285000|val_loss=0.8817|time=4.68e+02s
+12:15:06 [INFO] Epoch=9/10|step=285500|val_loss=0.8744|time=4.67e+02s
+12:24:58 [INFO] Epoch=9/10|step=286000|val_loss=0.8732|time=4.68e+02s|New best_val_loss=0.8732
+12:34:47 [INFO] Epoch=9/10|step=286500|val_loss=0.8819|time=4.67e+02s
+12:44:37 [INFO] Epoch=9/10|step=287000|val_loss=0.8741|time=4.68e+02s
+12:54:27 [INFO] Epoch=9/10|step=287500|val_loss=  0.88|time=4.67e+02s
+13:04:18 [INFO] Epoch=9/10|step=288000|val_loss=0.8762|time=4.68e+02s
+13:14:07 [INFO] Epoch=9/10|step=288500|val_loss=0.8797|time=4.68e+02s
+13:23:56 [INFO] Epoch=9/10|step=289000|val_loss=0.8762|time=4.67e+02s
+13:33:48 [INFO] Epoch=9/10|step=289500|val_loss=0.8765|time=4.67e+02s
+13:43:38 [INFO] Epoch=9/10|step=290000|val_loss=0.8798|time=4.67e+02s
+13:53:29 [INFO] Epoch=9/10|step=290500|val_loss=0.8741|time=4.68e+02s
+14:03:19 [INFO] Epoch=9/10|step=291000|val_loss=  0.88|time=4.67e+02s
+14:13:08 [INFO] Epoch=9/10|step=291500|val_loss=0.8769|time=4.68e+02s
+14:23:01 [INFO] Epoch=9/10|step=292000|val_loss=0.8787|time=4.68e+02s
+14:32:50 [INFO] Epoch=9/10|step=292500|val_loss=0.8771|time=4.68e+02s
+14:42:41 [INFO] Epoch=9/10|step=293000|val_loss=0.8734|time=4.68e+02s
+14:52:30 [INFO] Epoch=9/10|step=293500|val_loss=0.8769|time=4.68e+02s
+15:02:20 [INFO] Epoch=9/10|step=294000|val_loss=0.8784|time=4.68e+02s
+15:12:09 [INFO] Epoch=9/10|step=294500|val_loss=0.8754|time=4.68e+02s
+15:21:59 [INFO] Epoch=9/10|step=295000|val_loss=0.8747|time=4.68e+02s
+15:31:51 [INFO] Epoch=9/10|step=295500|val_loss=0.8729|time=4.68e+02s|New best_val_loss=0.8729
+15:41:40 [INFO] Epoch=9/10|step=296000|val_loss=0.8796|time=4.67e+02s
+15:51:29 [INFO] Epoch=9/10|step=296500|val_loss=0.8773|time=4.68e+02s
+16:01:21 [INFO] Epoch=9/10|step=297000|val_loss=0.8754|time=4.68e+02s
+16:11:11 [INFO] Epoch=9/10|step=297500|val_loss=0.8753|time=4.67e+02s
+16:21:01 [INFO] Epoch=9/10|step=298000|val_loss=0.8807|time=4.68e+02s
+16:30:53 [INFO] Epoch=9/10|step=298500|val_loss=0.8741|time=4.68e+02s
+16:40:42 [INFO] Epoch=9/10|step=299000|val_loss=0.8724|time=4.67e+02s|New best_val_loss=0.8724
+16:50:33 [INFO] Epoch=9/10|step=299500|val_loss=0.8723|time=4.68e+02s|New best_val_loss=0.8723
+17:00:24 [INFO] Epoch=9/10|step=300000|val_loss=0.8766|time=4.68e+02s
+17:10:13 [INFO] Epoch=9/10|step=300500|val_loss=0.8734|time=4.67e+02s
+17:20:05 [INFO] Epoch=9/10|step=301000|val_loss=0.8748|time=4.68e+02s
+17:29:57 [INFO] Epoch=9/10|step=301500|val_loss=0.8759|time=4.68e+02s
+17:39:47 [INFO] Epoch=9/10|step=302000|val_loss=0.8741|time=4.68e+02s
+17:49:41 [INFO] Epoch=9/10|step=302500|val_loss=0.8723|time=4.68e+02s|New best_val_loss=0.8723
+17:59:34 [INFO] Epoch=9/10|step=303000|val_loss=0.8732|time=4.68e+02s
+18:09:27 [INFO] Epoch=9/10|step=303500|val_loss=0.8723|time=4.67e+02s
+18:19:19 [INFO] Epoch=9/10|step=304000|val_loss=0.8782|time=4.7e+02s
+18:29:09 [INFO] Epoch=9/10|step=304500|val_loss=0.8765|time=4.67e+02s
+18:39:02 [INFO] Epoch=9/10|step=305000|val_loss=0.8722|time=4.68e+02s|New best_val_loss=0.8722
+18:48:50 [INFO] Epoch=9/10|step=305500|val_loss=0.8763|time=4.68e+02s
+18:58:41 [INFO] Epoch=9/10|step=306000|val_loss=0.8752|time=4.68e+02s
+19:08:29 [INFO] Epoch=9/10|step=306500|val_loss=0.8778|time=4.68e+02s
+19:18:16 [INFO] Epoch=9/10|step=307000|val_loss=0.8737|time=4.68e+02s
+19:28:06 [INFO] Epoch=9/10|step=307500|val_loss=0.8734|time=4.68e+02s
+19:37:57 [INFO] Epoch=9/10|step=308000|val_loss=0.8754|time=4.68e+02s
+19:47:46 [INFO] Epoch=9/10|step=308500|val_loss=0.8744|time=4.67e+02s
+19:57:34 [INFO] Epoch=9/10|step=309000|val_loss=0.8758|time=4.67e+02s
+20:07:45 [INFO] Epoch=10/10|step=309500|val_loss=0.8734|time=4.9e+02s
+20:17:38 [INFO] Epoch=10/10|step=310000|val_loss=0.8672|time=4.68e+02s|New best_val_loss=0.8672
+20:27:31 [INFO] Epoch=10/10|step=310500|val_loss=0.8753|time=4.68e+02s
+20:37:22 [INFO] Epoch=10/10|step=311000|val_loss=0.8713|time=4.68e+02s
+20:47:12 [INFO] Epoch=10/10|step=311500|val_loss=0.8792|time=4.69e+02s
+20:57:03 [INFO] Epoch=10/10|step=312000|val_loss=0.8721|time=4.68e+02s
+21:06:52 [INFO] Epoch=10/10|step=312500|val_loss=0.8771|time=4.68e+02s
+21:16:43 [INFO] Epoch=10/10|step=313000|val_loss=0.8738|time=4.68e+02s
+21:26:30 [INFO] Epoch=10/10|step=313500|val_loss=0.8721|time=4.67e+02s
+21:36:23 [INFO] Epoch=10/10|step=314000|val_loss=0.8734|time=4.68e+02s
+21:46:14 [INFO] Epoch=10/10|step=314500|val_loss= 0.879|time=4.68e+02s
+21:56:06 [INFO] Epoch=10/10|step=315000|val_loss=0.8748|time=4.68e+02s
+22:05:58 [INFO] Epoch=10/10|step=315500|val_loss=0.8748|time=4.69e+02s
+22:15:46 [INFO] Epoch=10/10|step=316000|val_loss=0.8725|time=4.68e+02s
+22:25:35 [INFO] Epoch=10/10|step=316500|val_loss=0.8758|time=4.67e+02s
+22:35:26 [INFO] Epoch=10/10|step=317000|val_loss= 0.871|time=4.68e+02s
+22:45:17 [INFO] Epoch=10/10|step=317500|val_loss=0.8723|time=4.67e+02s
+22:55:07 [INFO] Epoch=10/10|step=318000|val_loss=  0.87|time=4.68e+02s
+23:04:55 [INFO] Epoch=10/10|step=318500|val_loss=0.8729|time=4.67e+02s
+23:14:42 [INFO] Epoch=10/10|step=319000|val_loss=0.8732|time=4.68e+02s
+23:24:33 [INFO] Epoch=10/10|step=319500|val_loss=0.8721|time=4.68e+02s
+23:34:21 [INFO] Epoch=10/10|step=320000|val_loss=0.8693|time=4.68e+02s
+23:44:09 [INFO] Epoch=10/10|step=320500|val_loss=0.8719|time=4.67e+02s
+23:54:01 [INFO] Epoch=10/10|step=321000|val_loss=0.8732|time=4.68e+02s
+00:03:51 [INFO] Epoch=10/10|step=321500|val_loss=0.8727|time=4.68e+02s
+00:13:40 [INFO] Epoch=10/10|step=322000|val_loss= 0.872|time=4.68e+02s
+00:23:31 [INFO] Epoch=10/10|step=322500|val_loss=0.8717|time=4.67e+02s
+00:33:19 [INFO] Epoch=10/10|step=323000|val_loss= 0.873|time=4.67e+02s
+00:43:09 [INFO] Epoch=10/10|step=323500|val_loss=0.8734|time=4.68e+02s
+00:52:59 [INFO] Epoch=10/10|step=324000|val_loss=0.8678|time=4.68e+02s
+01:02:49 [INFO] Epoch=10/10|step=324500|val_loss=0.8732|time=4.67e+02s
+01:12:38 [INFO] Epoch=10/10|step=325000|val_loss=0.8734|time=4.68e+02s
+01:22:30 [INFO] Epoch=10/10|step=325500|val_loss= 0.877|time=4.68e+02s
+01:32:21 [INFO] Epoch=10/10|step=326000|val_loss=0.8724|time=4.68e+02s
+01:42:11 [INFO] Epoch=10/10|step=326500|val_loss=0.8706|time=4.67e+02s
+01:52:02 [INFO] Epoch=10/10|step=327000|val_loss=0.8726|time=4.68e+02s
+02:01:53 [INFO] Epoch=10/10|step=327500|val_loss=0.8744|time=4.68e+02s
+02:11:43 [INFO] Epoch=10/10|step=328000|val_loss=0.8756|time=4.68e+02s
+02:21:35 [INFO] Epoch=10/10|step=328500|val_loss=0.8719|time=4.68e+02s
+02:31:26 [INFO] Epoch=10/10|step=329000|val_loss=0.8684|time=4.68e+02s
+02:41:16 [INFO] Epoch=10/10|step=329500|val_loss=0.8752|time=4.68e+02s
+02:51:07 [INFO] Epoch=10/10|step=330000|val_loss=0.8704|time=4.68e+02s
+03:00:56 [INFO] Epoch=10/10|step=330500|val_loss=0.8725|time=4.67e+02s
+03:10:47 [INFO] Epoch=10/10|step=331000|val_loss=0.8741|time=4.68e+02s
+03:20:38 [INFO] Epoch=10/10|step=331500|val_loss=0.8738|time=4.68e+02s
+03:30:26 [INFO] Epoch=10/10|step=332000|val_loss=0.8707|time=4.68e+02s
+03:40:15 [INFO] Epoch=10/10|step=332500|val_loss=0.8762|time=4.68e+02s
+03:50:04 [INFO] Epoch=10/10|step=333000|val_loss=0.8715|time=4.68e+02s
+03:59:55 [INFO] Epoch=10/10|step=333500|val_loss=0.8796|time=4.67e+02s
+04:09:47 [INFO] Epoch=10/10|step=334000|val_loss=0.8734|time=4.68e+02s
+04:19:38 [INFO] Epoch=10/10|step=334500|val_loss=0.8745|time=4.68e+02s
+04:29:28 [INFO] Epoch=10/10|step=335000|val_loss=0.8721|time=4.67e+02s
+04:39:19 [INFO] Epoch=10/10|step=335500|val_loss=0.8717|time=4.68e+02s
+04:49:14 [INFO] Epoch=10/10|step=336000|val_loss=0.8771|time=4.68e+02s
+04:59:05 [INFO] Epoch=10/10|step=336500|val_loss=0.8701|time=4.67e+02s
+05:08:59 [INFO] Epoch=10/10|step=337000|val_loss=0.8694|time=4.68e+02s
+05:18:47 [INFO] Epoch=10/10|step=337500|val_loss=0.8734|time=4.68e+02s
+05:28:39 [INFO] Epoch=10/10|step=338000|val_loss=0.8713|time=4.68e+02s
+05:38:30 [INFO] Epoch=10/10|step=338500|val_loss=0.8733|time=4.68e+02s
+05:48:21 [INFO] Epoch=10/10|step=339000|val_loss=0.8684|time=4.67e+02s
+05:58:12 [INFO] Epoch=10/10|step=339500|val_loss=0.8696|time=4.68e+02s
+06:08:06 [INFO] Epoch=10/10|step=340000|val_loss=0.8754|time=4.68e+02s
+06:17:57 [INFO] Epoch=10/10|step=340500|val_loss=0.8736|time=4.67e+02s
+06:27:48 [INFO] Epoch=10/10|step=341000|val_loss=0.8686|time=4.68e+02s
+06:37:38 [INFO] Epoch=10/10|step=341500|val_loss=0.8724|time=4.67e+02s
+06:47:30 [INFO] Epoch=10/10|step=342000|val_loss=0.8747|time=4.67e+02s
+06:57:23 [INFO] Epoch=10/10|step=342500|val_loss=0.8717|time=4.68e+02s
+07:07:13 [INFO] Epoch=10/10|step=343000|val_loss=0.8695|time=4.68e+02s
+07:17:07 [INFO] Epoch=10/10|step=343500|val_loss=0.8704|time=4.68e+02s
+07:21:03 [INFO] Fold0 val_loss_list=[0.867219]
+07:21:03 [INFO] Val Cv=0.8672 +-    0.0
+07:21:03 [INFO] Train finish

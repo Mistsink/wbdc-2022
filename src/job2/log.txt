@@ -1,0 +1,31 @@
+Epoch 1 : Loss 1.440, F1 0.6089
+Epoch 2 : Loss 1.340, F1 0.6419
+Epoch 3 : Loss 1.314, F1 0.6567
+Epoch 4 : Loss 1.358, F1 0.6729
+Epoch 5 : Loss 1.450, F1 0.6767
+SWA : Loss 1.278, F1 0.6825
+Epoch 1 : Loss 1.437, F1 0.6079
+Epoch 2 : Loss 1.292, F1 0.6518
+Epoch 3 : Loss 1.274, F1 0.6651
+Epoch 4 : Loss 1.350, F1 0.6746
+Epoch 5 : Loss 1.423, F1 0.6806
+SWA : Loss 1.261, F1 0.6875
+Epoch 1 : Loss 1.433, F1 0.6091
+Epoch 2 : Loss 1.261, F1 0.6571
+Epoch 3 : Loss 1.294, F1 0.6627
+Epoch 4 : Loss 1.342, F1 0.6789
+Epoch 5 : Loss 1.417, F1 0.6767
+SWA : Loss 1.266, F1 0.6867
+Epoch 1 : Loss 1.399, F1 0.6191
+Epoch 2 : Loss 1.308, F1 0.6498
+Epoch 3 : Loss 1.348, F1 0.6609
+Epoch 4 : Loss 1.402, F1 0.6753
+Epoch 5 : Loss 1.491, F1 0.6772
+SWA : Loss 1.307, F1 0.6879
+Epoch 1 : Loss 1.426, F1 0.609
+Epoch 2 : Loss 1.304, F1 0.6469
+Epoch 3 : Loss 1.306, F1 0.6683
+Epoch 4 : Loss 1.413, F1 0.6755
+Epoch 5 : Loss 1.504, F1 0.6777
+SWA : Loss 1.311, F1 0.6876
+

@@ -1,0 +1,29 @@
+Epoch 1 : Loss 1.293, F1 0.6427
+Epoch 2 : Loss 1.217, F1 0.6682
+Epoch 3 : Loss 1.204, F1 0.6739
+SWA : Loss 1.203, F1 0.6713
+Epoch 1 : Loss 1.273, F1 0.6473
+Epoch 2 : Loss 1.183, F1 0.6757
+Epoch 3 : Loss 1.176, F1 0.6877
+SWA : Loss 1.173, F1 0.6853
+Epoch 1 : Loss 1.259, F1 0.6485
+Epoch 2 : Loss 1.153, F1 0.6788
+Epoch 3 : Loss 1.185, F1 0.6881
+SWA : Loss 1.159, F1 0.684
+Epoch 1 : Loss 1.253, F1 0.6535
+Epoch 2 : Loss 1.142, F1 0.6888
+Epoch 3 : Loss 1.180, F1 0.6915
+SWA : Loss 1.152, F1 0.6916
+Epoch 1 : Loss 1.259, F1 0.6511
+Epoch 2 : Loss 1.168, F1 0.6751
+Epoch 3 : Loss 1.180, F1 0.6855
+SWA : Loss 1.167, F1 0.6824
+
+SWA : Loss 1.192, F1 0.6737
+SWA : Loss 1.168, F1 0.6859
+SWA : Loss 1.155, F1 0.6851
+SWA : Loss 1.147, F1 0.6925
+SWA : Loss 1.162, F1 0.6848
+
+
+pre_train:19:01:39 [INFO] Epoch=7/10|step=233000|val_loss=0.8773|time=4.68e+02s|New best_val_loss=0.8773
